@@ -5,13 +5,17 @@
   font-size: $font-size;
 }
 
-@mixin btn($width, $bg-color, $color, $bordr-color) {
-  width: $width;
-  height: 2.2em;
-  border-radius: 1.1em;
+@mixin flex-center() {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@mixin btn($width, $bg-color, $color, $bordr-color) {
+  @include flex-center();
+  width: $width;
+  height: 2.2em;
+  border-radius: 1.1em;
   background-color: $bg-color;
   color: $color;
   border: 1px solid $border-color;
@@ -24,3 +28,4 @@
 @mixin form-btn($bg-color, $color, $border-color) {
   @include btn(100%, $bg-color, $color, $border-color);
 }
+

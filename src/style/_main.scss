@@ -1,9 +1,8 @@
 @use "variables";
+@use "mixins";
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex-center();
   flex-grow: 1;
 
   .form {
@@ -11,7 +10,7 @@ main {
   }
 }
 
-.link {
+.form-link {
   width: 100%;
   color: $primary-color;
 }
@@ -24,16 +23,15 @@ main {
   border: 1px solid $border-color;
   padding: 30px;
 
-  > * {
+  & > input,
+  button,
+  a,
+  span {
     margin-top: 1em;
-  }
-
-  > *:first-child {
-    margin-top: 0;
   }
 }
 
-.text-input {
+.form-input {
   width: 100%;
   height: 4em;
   font-size: inherit;

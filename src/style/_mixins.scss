@@ -20,3 +20,7 @@
 @mixin nav-btn($bg-color, $color, $border-color) {
   @include btn(6em, $bg-color, $color, $border-color);
 }
+
+@mixin form-btn($bg-color, $color, $border-color) {
+  @include btn(100%, $bg-color, $color, $border-color);
+}

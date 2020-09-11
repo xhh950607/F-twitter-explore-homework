@@ -1,0 +1,27 @@
+@use "variables";
+@use "mixins";
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-bottom: 1px solid $border-color;
+}
+
+nav > ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    li {
+        margin-left: 5px;
+    }
+}
+
+.nav-login-btn {
+    @include nav-btn(transparent, $primary-color, $primary-color);
+}
+
+.nav-register-btn {
+    @include nav-btn($primary-color, white, $primary-color);
+}

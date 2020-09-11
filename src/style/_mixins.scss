@@ -1,4 +1,22 @@
+@use "variables";
+
 @mixin heading($font-size) {
   margin-top: 0;
   font-size: $font-size;
+}
+
+@mixin btn($width, $bg-color, $color, $bordr-color) {
+  width: $width;
+  height: 2.2em;
+  border-radius: 1.1em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color;
+  color: $color;
+  border: 1px solid $border-color;
+}
+
+@mixin nav-btn($bg-color, $color, $border-color) {
+  @include btn(6em, $bg-color, $color, $border-color);
 }

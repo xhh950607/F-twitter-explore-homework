@@ -1,6 +1,7 @@
 @use "variables";
 @use "mixins";
 
+// TODO feedback: 正确使用了Flex布局使得form在main里面居中了。很好。
 main {
   @include flex-center();
   flex-grow: 1;
@@ -14,7 +15,7 @@ main {
   width: 100%;
   color: $primary-color;
 }
-
+// TODO feedback: 正确使用了Flex布局使得form里面的元素都居中了。很好。
 .form {
   display: flex;
   flex-direction: column;
@@ -22,17 +23,21 @@ main {
   border-radius: $border-radius-base;
   border: 1px solid $border-color;
   padding: 30px;
-
+  //TODO feedback： 1：这里没有必要再嵌套里面再使用子代选择器哈
+  // 2：在advanced css那堂课有讲过，要尽量使用class选择器，避免使用标签选择器
   & > input,
   button,
   a,
   span {
+    // TODO feedback: 详见另外一处em的feedback
     margin-top: 1em;
   }
 }
 
 .form-input {
   width: 100%;
+  // TODO feedback: em是相对单位,一般在项目上很少使用em,除非某些特殊的设计。如果你这里是刻意这样的，你也清楚em的特性，那没问题。
+  //  如果，不是很确定的话，下来了解一下em的特性和使用场景，特别是和rem的区别。
   height: 4em;
   font-size: inherit;
   background-color: transparent;

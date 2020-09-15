@@ -21,6 +21,8 @@
   border: 1px solid $border-color;
 }
 
+// TODO feedback: nav-btn和form-btn他们是唯一的差别就是width不一样，而这个width已经是@mixin btn(....)的一个参数了，所以
+//  nav-btn和form-btn其实都不需要了
 @mixin nav-btn($bg-color, $color, $border-color) {
   @include btn(6em, $bg-color, $color, $border-color);
 }
@@ -28,4 +30,3 @@
 @mixin form-btn($bg-color, $color, $border-color) {
   @include btn(100%, $bg-color, $color, $border-color);
 }
-
